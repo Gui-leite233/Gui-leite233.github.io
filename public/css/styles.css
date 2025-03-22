@@ -1,0 +1,96 @@
+/* Updated styles for Frutiger Aero style */
+
+/* Body and Backgrounds */
+body {
+    background: linear-gradient(to bottom, #e0f7fa 0%, #ffffff 100%);
+    font-family: "Segoe UI", Calibri, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Styles for the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+/* Styles for navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00796b;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #004d40;
+}
+
+/* Styles for sections */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Styles for project items */
+.project {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(to bottom, #e8f4ff 0%, #d9edff 40%);
+    border: none;
+    border-radius: 5px;
+    color: #2a5db0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #d8eeff 0%, #c5e3ff 40%);
+}
