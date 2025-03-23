@@ -1,96 +1,90 @@
-/* Updated styles for Frutiger Aero style */
-
-/* Body and Backgrounds */
 body {
-    background: linear-gradient(to bottom, #e0f7fa 0%, #ffffff 100%);
-    font-family: "Segoe UI", Calibri, sans-serif;
-    margin: 0;
-    min-height: 100vh;
+    background: #000; /* Set background color to black */
+    color: #0f0; /* Matrix green for text */
+    font-family: 'Courier New', monospace;
+    margin: 0; /* Remove default margin */
+    overflow: hidden;
 }
 
-/* Styles for the container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
 }
 
-/* Styles for the header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #00796b;
-}
-
-/* Styles for navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #00796b;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #004d40;
-}
-
-/* Styles for sections */
-section {
-    margin: 40px 0;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#hero {
+.content {
+    padding: 1rem; /* Reduce padding for a more compact layout */
     text-align: center;
-    padding: 50px 0;
+    max-width: 800px; /* Set a maximum width for the content */
+    margin: 2rem auto; /* Add vertical margin for spacing */
 }
 
-/* Styles for project items */
+.projects {
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    align-items: center; /* Center align the projects */
+    margin: 2rem 0; /* Add vertical margin */
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+.nome {
+    padding-top: 50px;
+    font-size: 80px;
+    text-shadow: 0 0 10px #0f0;
+    animation: matrixAnimation 2s infinite;
+}
+
 .project {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px 0;
-    transition: transform 0.3s;
+    border: 1px solid #0f0;
+    padding: 2rem; /* Increased padding for larger cards */
+    width: 300px; /* Increased width for larger cards */
+    max-width: 90%; /* Prevent stretching on wide screens */
+    margin: 10px; /* Reduce margin for a tighter layout */
+    transition: transform 0.3s; /* Add transition for hover effect */
+    text-align: center; /* Center text in project cards */
 }
 
-.project:hover {
-    transform: scale(1.02);
+.about-me {
+    max-width: 600px; /* Set a fixed width for the About Me section */
+    margin: 0 auto; /* Center the About Me section */
+    text-align: center; /* Center text in About Me section */
 }
 
-/* Button Styles */
-button {
-    background: linear-gradient(to bottom, #e8f4ff 0%, #d9edff 40%);
-    border: none;
-    border-radius: 5px;
-    color: #2a5db0;
+.buttons {
+    display: flex;
+    justify-content: center; /* Space buttons evenly */
+    gap: 10px; /* Reduce gap between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    padding-bottom: 50px; /* Add padding to separate buttons from content */
+}
+.contato {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid #0f0;
+    color: #0f0;
     padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-button:hover {
-    background: linear-gradient(to bottom, #d8eeff 0%, #c5e3ff 40%);
+.btn:hover {
+    background: #0f0;
+    color: #000;
+}
+.matrix-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+    animation: matrixAnimation 2s infinite;
 }

@@ -1,30 +1,27 @@
-// Simple fade-in effect for page elements
-document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fade-in');
-    
-    elements.forEach((element, index) => {
-        setTimeout(() => {
-            element.classList.add('visible');
-        }, 100 * index);
-    });
-    
-    // Optional: Add reflection effects on hover
-    const glossyElements = document.querySelectorAll('.glossy-panel');
-    
-    glossyElements.forEach(element => {
-        element.addEventListener('mousemove', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            this.style.background = `
-                linear-gradient(
-                    135deg, 
-                    rgba(255,255,255,0.4) ${x / 5}%, 
-                    rgba(255,255,255,0.1) ${x / 3 + 20}%
-                ),
-                rgba(228, 245, 255, 0.7)
-            `;
-        });
-    });
-});
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+document.querySelector('.matrix-bg').appendChild(canvas);
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+const drops = Array(Math.floor(columns)).fill(0);
+
+function drawMatrix() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#0f0';
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+    }
+}
+
+setInterval(drawMatrix, 50);
