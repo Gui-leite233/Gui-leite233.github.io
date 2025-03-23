@@ -114,7 +114,7 @@ header {
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .project-grid {
         flex-direction: column;
         align-items: center;
