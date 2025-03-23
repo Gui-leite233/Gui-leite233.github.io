@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap');
 body {
-    background: #000; /* Set background color to black */
-    color: #0f0; /* Matrix green for text */
-    font-family: 'Courier New', monospace;
-    margin: 0; /* Remove default margin */
-    overflow: hidden;
+    background: #000;
+    color: #0f0;
+    font-family: 'VT323', 'Press Start 2P', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+html {
+    height: 100%;
 }
 
 .matrix-bg {
@@ -16,19 +23,25 @@ body {
     opacity: 0.2;
 }
 
-.content {
-    padding: 1rem; /* Reduce padding for a more compact layout */
-    text-align: center;
-    max-width: 800px; /* Set a maximum width for the content */
-    margin: 2rem auto; /* Add vertical margin for spacing */
+header {
+    padding: 2rem 0;
 }
 
-.projects {
+.content {
+    padding: 1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Project grid container */
+.project-grid {
     display: flex;
-    flex-direction: column; /* Stack projects vertically */
-    align-items: center; /* Center align the projects */
-    margin: 2rem 0; /* Add vertical margin */
-    padding: 1rem; /* Add padding for better spacing */
+    flex-direction: row; /* Horizontal on desktop */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem auto;
 }
 
 .nome {
@@ -40,27 +53,30 @@ body {
 
 .project {
     border: 1px solid #0f0;
-    padding: 2rem; /* Increased padding for larger cards */
-    width: 300px; /* Increased width for larger cards */
-    max-width: 90%; /* Prevent stretching on wide screens */
-    margin: 10px; /* Reduce margin for a tighter layout */
-    transition: transform 0.3s; /* Add transition for hover effect */
-    text-align: center; /* Center text in project cards */
+    padding: 2rem;
+    width: 300px;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.3s;
+    text-align: center;
 }
 
 .about-me {
-    max-width: 600px; /* Set a fixed width for the About Me section */
-    margin: 0 auto; /* Center the About Me section */
-    text-align: center; /* Center text in About Me section */
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 18px;
 }
 
 .buttons {
     display: flex;
-    justify-content: center; /* Space buttons evenly */
-    gap: 10px; /* Reduce gap between buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-    padding-bottom: 50px; /* Add padding to separate buttons from content */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
 }
+
 .contato {
     display: flex;
     justify-content: center;
@@ -81,10 +97,30 @@ body {
     background: #0f0;
     color: #000;
 }
+
 .matrix-text {
-    font-size: 24px;
+    font-size: 29px;
     font-weight: bold;
     color: #0f0;
     text-shadow: 0 0 10px #0f0;
     animation: matrixAnimation 2s infinite;
+}
+
+/* For matrix animation */
+@keyframes matrixAnimation {
+    0% { text-shadow: 0 0 5px #0f0; }
+    50% { text-shadow: 0 0 20px #0f0; }
+    100% { text-shadow: 0 0 5px #0f0; }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nome {
+        font-size: 50px;
+    }
 }
