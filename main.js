@@ -24,4 +24,24 @@ function drawMatrix() {
     }
 }
 
+
+document.querySelector(".terminal-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+    let form = event.target;
+    let formData = new FormData(form);
+
+    let response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset();
+    } else {
+        alert("Error sending message. Try again later.");
+    }
+});
+
 setInterval(drawMatrix, 50);

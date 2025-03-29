@@ -30,8 +30,12 @@ header {
 .content {
     padding: 1rem;
     text-align: center;
-    max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Take full width */
+    max-width: none; /* Remove max-width constraint */
 }
 
 /* Project grid container */
@@ -52,13 +56,19 @@ header {
 }
 
 .project {
-    border: 1px solid #0f0;
-    padding: 2rem;
+    border: 1px dashed #0f0;
+    background: rgba(0, 255, 0, 0.05);
+    padding: 1rem;
+    margin-bottom: 1rem;
     width: 300px;
     max-width: 300px;
     margin: 10px;
     transition: transform 0.3s;
     text-align: center;
+}
+
+.project p {
+    font-size: 24px !important;
 }
 
 .about-me {
@@ -67,6 +77,10 @@ header {
     text-align: center;
     padding: 0 1rem;
     font-size: 18px;
+}
+
+.about-me p {
+    font-size: 24px;
 }
 
 .buttons {
@@ -85,12 +99,18 @@ header {
 }
 
 .btn {
+    font-family: 'VT323', monospace;
+    border: 1px dashed #0f0;
     background: transparent;
-    border: 1px solid #0f0;
+    padding: 8px 16px;
     color: #0f0;
-    padding: 10px 20px;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 22px;
+}
+
+.btn::before {
+    content: "> ";
 }
 
 .btn:hover {
@@ -99,11 +119,19 @@ header {
 }
 
 .matrix-text {
-    font-size: 29px;
+    font-size: 34px;
     font-weight: bold;
     color: #0f0;
     text-shadow: 0 0 10px #0f0;
     animation: matrixAnimation 2s infinite;
+    font-family: 'VT323', monospace;
+    margin-left: 20px;
+    position: relative;
+}
+
+.matrix-text::before {
+    content: "$ ";
+    color: #0f0;
 }
 
 /* For matrix animation */
@@ -122,5 +150,561 @@ header {
     
     .nome {
         font-size: 50px;
+    }
+
+    .ascii-art {
+        font-size: 6px;
+        transform: scale(0.9);
+        margin: 0 -10px;
+    }
+
+    .project p {
+        font-size: 20px !important;
+    }
+    
+    .about-me p {
+        font-size: 20px;
+    }
+    
+    .terminal-form label,
+    .btn,
+    .section-prompt,
+    .section-output {
+        font-size: 18px;
+    }
+    
+    h2 {
+        font-size: 26px !important;
+    }
+    
+    .matrix-text {
+        font-size: 28px;
+        margin: 20px auto;
+        padding: 10px;
+        border: 1px dashed #0f0;
+        background: rgba(0, 255, 0, 0.1);
+        width: 90%;
+        text-align: center;
+    }
+    
+    .project-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+    }
+    
+    .project {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 5px;
+        max-width: 400px;
+    }
+    
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.terminal {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #0f0;
+    border-radius: 6px;
+    margin: 20px auto;
+    width: 80%; /* Increased width */
+    max-width: 2200px; /* Increased to fit ASCII art without scaling */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.terminal-header {
+    background: #1a1a1a;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.terminal-button.red { background: #ff5f56; }
+.terminal-button.yellow { background: #ffbd2e; }
+.terminal-button.green { background: #27c93f; }
+
+.terminal-title {
+    color: #666;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.terminal-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    line-height: 1.3;
+}
+
+.ascii-art {
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    margin: 20px auto;
+    font-size: 12px; /* Kept original size */
+    line-height: 1.15;  /* Adjusted for better alignment */
+    text-shadow: 0 0 5px #0f0;
+    white-space: pre;
+    text-align: center;
+    display: block;
+    width: 1154px;
+    overflow-x: visible;
+    letter-spacing: 0;
+    font-weight: normal;  /* Added to ensure consistent rendering */
+}
+
+.terminal-prompt {
+    margin: 20px 0;
+    font-family: 'Courier New', monospace;
+}
+
+.prompt-user {
+    color: #0f0;
+}
+
+.prompt-location {
+    color: #0087ff;
+}
+
+.typing {
+    border-right: 2px solid #0f0;
+    animation: blink 1s step-end infinite;
+}
+
+.section-prompt {
+    color: #0f0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.section-prompt::before {
+    content: "@portfolio:~$ ";
+    color: #0f0;
+}
+
+.section-output {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 22px;
+}
+
+.section-output::before {
+    content: ">";
+    position: absolute;
+    left: 5px;
+    color: #0f0;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@media screen and (max-width: 768px) {
+    .terminal {
+        margin: 10px;
+        width: 98%;
+    }
+    
+    .ascii-art {
+        font-size: 3px; /* Make font even smaller on mobile */
+        transform: scale(0.8); /* Scale down slightly */
+        width: 100%;
+        max-width: 100%;
+        overflow-x: scroll; /* Explicitly set scroll for mobile */
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
+    
+    .terminal-content {
+        padding: 10px; /* Less padding on mobile */
+    }
+}
+
+.terminal-form {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.terminal-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #0f0;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+}
+
+.terminal-form input,
+.terminal-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px dashed #0f0;
+    color: #0f0;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+.terminal-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.terminal-form input:focus,
+.terminal-form textarea:focus {
+    outline: none;
+    border-style: solid;
+    box-shadow: 0 0 5px #0f0;
+}
+
+h2 {
+    font-size: 32px !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .terminal {
+        width: 90%;
+    }
+    
+    .project {
+        width: 45%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .terminal {
+        width: 95%;
+        margin: 10px auto;
+    }
+    
+    .project-grid {
+        flex-direction: column;
+    }
+    
+    .project {
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .ascii-art {
+        font-size: 4px;
+        transform: scale(0.9);
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .terminal-form {
+        width: 90%;
+    }
+    
+    .matrix-text {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .terminal {
+        width: 98%;
+        margin: 5px auto;
+    }
+    
+    .terminal-content {
+        padding: 10px 5px;
+    }
+    
+    .ascii-art {
+        font-size: 3px;
+        transform: scale(0.8);
+    }
+    
+    .project p {
+        font-size: 18px !important;
+    }
+    
+    .about-me p {
+        font-size: 18px;
+    }
+    
+    .btn {
+        width: 90%;
+        font-size: 18px;
+    }
+    
+    .terminal-form input,
+    .terminal-form textarea {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .terminal {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    
+    .terminal-content {
+        padding: 10px;
+    }
+    
+    .ascii-art {
+        display: none; /* Hide ASCII art on mobile */
+    }
+    
+    .mobile-title {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .matrix-text {
+        font-size: 28px;
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px dashed #0f0;
+        background: rgba(0, 255, 0, 0.1);
+        width: 90%;
+    }
+    
+    .project-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 95%;
+    }
+    
+    .project {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    
+    .project a {
+        font-size: 26px !important;
+        padding: 10px 0;
+        display: block;
+    }
+    
+    .project p {
+        font-size: 20px !important;
+        line-height: 1.4;
+        margin: 10px 0;
+    }
+    
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .btn {
+        font-size: 20px;
+        padding: 12px;
+        text-align: center;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .section-prompt {
+        width: 90%;
+        margin: 20px auto 10px;
+        padding: 5px;
+        border-top: 1px dashed #0f0;
+    }
+    
+    .section-output {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    
+    .terminal-form {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .terminal-form input,
+    .terminal-form textarea {
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+    
+    .terminal-form textarea {
+        height: 120px;
+    }
+    
+    .about-me {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .about-me p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    
+    h2 {
+        font-size: 28px !important;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .matrix-text {
+        font-size: 24px;
+    }
+    
+    .project a {
+        font-size: 24px !important;
+    }
+    
+    .project p {
+        font-size: 18px !important;
+    }
+    
+    .btn {
+        font-size: 18px;
+    }
+    
+    .about-me p {
+        font-size: 18px;
+    }
+    
+    .terminal-form input,
+    .terminal-form textarea {
+        font-size: 16px;
+    }
+}
+
+.mobile-title {
+    display: none;
+    font-size: 38px;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    padding: 15px;
+    border: 1px dashed #0f0;
+    background: rgba(0, 255, 0, 0.05);
+    width: 90%;
+    margin: 20px auto;
+    animation: matrixAnimation 2s infinite;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .ascii-art {
+        display: none;
+    }
+    
+    .mobile-title {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .terminal-content {
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .terminal {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    
+    .matrix-text,
+    .mobile-title,
+    .section-prompt,
+    .section-output,
+    .about-me,
+    .project,
+    .buttons,
+    .terminal-form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .section-output::before {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -20px;
+    }
+    
+    .section-prompt {
+        text-align: center;
+        padding: 20px 0 10px 0;
+    }
+    
+    .project-grid {
+        padding: 0 10px;
+    }
+    
+    .btn {
+        justify-content: center;
+    }
+    
+    .form-group {
+        text-align: center;
+    }
+    
+    .terminal-form input,
+    .terminal-form textarea {
+        text-align: center;
+        margin: 10px auto;
     }
 }

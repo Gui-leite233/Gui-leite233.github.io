@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Guilherme Leite - Desenvolvedor Web</title>
+    <title>$Guilherme Leite - Desenvolvedor Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 
@@ -11,59 +11,115 @@
 
 <body>
     <div class="matrix-bg"></div>
-    <header>
-        <div class="content">
-            <h1 class="nome" style="text-align: center;">Guilherme Leite</h1>
-            <p class="matrix-text">Desenvolvedor Full-Stack</p>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="terminal-button red"></span>
+            <span class="terminal-button yellow"></span>
+            <span class="terminal-button green"></span>
+            <span class="terminal-title">portfolio.exe</span>
         </div>
-    </header>
-    <main>
-        <section class="about-me" >
-            <h2>Sobre mim</h2>
-            <p>
-                Sou Guilherme Leite da Silva Chagas, desenvolvedor full-stack apaixonado por tecnologia. Tenho
-                experiência com Laravel, JavaScript, Java, Ollama, bancos de dados (MySQL/MariaDB/MongoDB), Docker,
-                GitHub e APIs.
-            </p>
-        </section>
-        <section class="projects">
-            <h2 style="text-align: center; font-size: 27px;">Projetos</h2>
+        <div class="terminal-content">
+            <header>
+                <div class="content">
+                    <pre class="ascii-art">
+                                                                                                                                                              
+           GGGGGGGGGGGGG                    iiii  llllll hhhhhh                                                                                                 
+        GGG::::::::::::G                   i::::i l::::l h::::h                                                                                                 
+      GG:::::::::::::::G                    iiii  l::::l h::::h                                                                                                 
+     G:::::GGGGGGGG::::G                          l::::l h::::h                                                                                                 
+    G:::::G       GGGGGGuuuuuu    uuuuuu  iiiiiii l::::l h::::h hhhhh           eeeeeeeeeeee    rrrrr   rrrrrrrrr      mmmmmmm    mmmmmmm       eeeeeeeeeeee    
+   G:::::G              u::::u    u::::u  i:::::i l::::l h::::hh:::::hhh      ee::::::::::::ee  r::::rrr:::::::::r   mm:::::::m  m:::::::mm   ee::::::::::::ee  
+   G:::::G              u::::u    u::::u   i::::i l::::l h::::::::::::::hh   e::::::eeeee:::::eer:::::::::::::::::r m::::::::::mm::::::::::m e::::::eeeee:::::ee
+   G:::::G    GGGGGGGGGGu::::u    u::::u   i::::i l::::l h:::::::hhh::::::h e::::::e     e:::::err::::::rrrrr::::::rm::::::::::::::::::::::me::::::e     e:::::e
+   G:::::G    G::::::::Gu::::u    u::::u   i::::i l::::l h::::::h   h::::::he:::::::eeeee::::::e r:::::r     r:::::rm:::::mmm::::::mmm:::::me:::::::eeeee::::::e
+   G:::::G    GGGGG::::Gu::::u    u::::u   i::::i l::::l h:::::h     h:::::he:::::::::::::::::e  r:::::r     rrrrrrrm::::m   m::::m   m::::me:::::::::::::::::e 
+   G:::::G        G::::Gu::::u    u::::u   i::::i l::::l h:::::h     h:::::he::::::eeeeeeeeeee   r:::::r            m::::m   m::::m   m::::me::::::eeeeeeeeeee  
+    G:::::G       G::::Gu:::::uuuu:::::u   i::::i l::::l h:::::h     h:::::he:::::::e            r:::::r            m::::m   m::::m   m::::me:::::::e           
+     G:::::GGGGGGGG::::Gu:::::::::::::::uu i::::i l::::l h:::::h     h:::::he::::::::e           r:::::r            m::::m   m::::m   m::::me::::::::e          
+      GG:::::::::::::::G u:::::::::::::::u i::::i l::::l h:::::h     h:::::h e::::::::eeeeeeee   r:::::r            m::::m   m::::m   m::::m e::::::::eeeeeeee  
+        GGG::::::GGG:::G  uu::::::::uu:::u i::::i l::::l h:::::h     h:::::h  ee:::::::::::::e   r:::::r            m::::m   m::::m   m::::m  ee:::::::::::::e  
+           GGGGGG   GGGG    uuuuuuuu  uuuu iiiiii llllll hhhhhhh     hhhhhhh    eeeeeeeeeeeeee   rrrrrrr            mmmmmm   mmmmmm   mmmmmm    eeeeeeeeeeeeee                                                                                                                                                          
+   </pre>
+                    <h1 class="mobile-title">Guilherme Leite</h1>
+                    <p class="matrix-text">echo "Desenvolvedor Full-Stack"</p>
+                </div>
+            </header>
+            <main>
+                <section class="about-me">
+                    <div class="section-prompt">cat SobreMim.txt</div>
+                    <div class="section-output">
+                        <h2>Sobre mim</h2>
+                        <p>
+                            Sou Guilherme Leite da Silva Chagas, desenvolvedor full-stack apaixonado por tecnologia. Tenho
+                            experiência com Laravel, JavaScript, Java, Ollama, bancos de dados (MySQL/MariaDB/MongoDB), Docker,
+                            GitHub e APIs.
+                        </p>
+                    </div>
+                </section>
+                
+                <section class="projects">
+                    <div class="section-prompt">ls -l projetos/</div>
+                    <div class="section-output">
+                        <h2 style="text-align: center; font-size: 27px;">Projetos</h2>
 
-            <div class="project-grid"> 
-                <div class="project">
-                    <a href="https://github.com/Gui-leite233/ProjetoTrilhas"
-                        style="text-decoration: none; color: #0f0; display: block; font-size: 24px; font-weight: bold;">
-                        <u>Projeto Trilhas</u>
-                    </a>
-                    <p style="font-size: 20px;">Projeto Trilhas é uma iniciativa institucional focada no combate à evasão escolar por meio de uma
-                        plataforma inovadora que conecta alunos, professores e futuros estudantes do IFPR. Foi meu maior
-                        projeto, onde desenvolvi uma aplicação que permite aos alunos compartilhar conhecimentos e, com
-                        isso, serem reconhecidos e recompensados. O Trilhas promove o engajamento e o aprendizado
-                        colaborativo, incentivando uma comunidade educacional mais integrada e ativa.</p>
-                </div>
-                <div class="project">
-                    <a href="https://github.com/fernandofps20/ia-project"
-                        style="text-decoration: none; color: #0f0; display: block; font-size: 24px; font-weight: bold;">
-                        <u>IA-Project</u>
-                    </a>
-                    <p style="font-size: 20px;">Neste projeto, fui responsável pelo desenvolvimento do front-end e pela configuração do Docker. A
-                        aplicação foi projetada para simplificar a vida dos desenvolvedores, permitindo que o usuário defina
-                        as características desejadas para o seu banco de dados, enquanto uma inteligência artificial
-                        automatiza o restante do processo.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <h2 class="contato">Contato</h2>
-            <div class="buttons">
-                <a href="https://github.com/Gui-leite233" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/guilhermeleitechagas/" class="btn"><i class="fab fa-linkedin"></i>
-                    LinkedIn</a>
-                <a href="mailto:Guilhermeleite2334@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
-            </div>
-        </footer>
-    </main>
+                        <div class="project-grid"> 
+                            <div class="project">
+                                <a href="https://github.com/Gui-leite233/ProjetoTrilhas"
+                                    style="text-decoration: none; color: #0f0; display: block; font-size: 24px; font-weight: bold;">
+                                    <u>Projeto Trilhas</u>
+                                </a>
+                                <p style="font-size: 20px;">Projeto Trilhas é uma iniciativa institucional focada no combate à evasão escolar por meio de uma
+                                    plataforma inovadora que conecta alunos, professores e futuros estudantes do IFPR. Foi meu maior
+                                    projeto, onde desenvolvi uma aplicação que permite aos alunos compartilhar conhecimentos e, com
+                                    isso, serem reconhecidos e recompensados. O Trilhas promove o engajamento e o aprendizado
+                                    colaborativo, incentivando uma comunidade educacional mais integrada e ativa.</p>
+                            </div>
+                            <div class="project">
+                                <a href="https://github.com/fernandofps20/ia-project"
+                                    style="text-decoration: none; color: #0f0; display: block; font-size: 24px; font-weight: bold;">
+                                    <u>IA-Project</u>
+                                </a>
+                                <p style="font-size: 20px;">Neste projeto, fui responsável pelo desenvolvimento do front-end e pela configuração do Docker. A
+                                    aplicação foi projetada para simplificar a vida dos desenvolvedores, permitindo que o usuário defina
+                                    as características desejadas para o seu banco de dados, enquanto uma inteligência artificial
+                                    automatiza o restante do processo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <footer>
+                    <div class="section-prompt">cat EntreEmContato.txt</div>
+                    <div class="section-output">
+                        <h2 class="contato">Contato</h2>
+                        <div class="buttons">
+                            <a href="https://github.com/Gui-leite233" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/guilhermeleitechagas/" class="btn"><i class="fab fa-linkedin"></i>
+                                LinkedIn</a>
+                            <a href="mailto:Guilhermeleite2334@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+                        </div>
+                        <div class="section-prompt">echo "Me envie uma mensagem diretamente:"</div>
+                        <form action="https://formspree.io/f/mldjwngl" method="POST" class="terminal-form">
+                            <div class="form-group">
+                                <label>
+                                    $ echo "Seu email:"
+                                    <input type="email" name="email" required>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    $ echo "Sua mensagem:"
+                                    <textarea name="message" required></textarea>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn">enviar_mensagem.sh</button>
+                        </form>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 
