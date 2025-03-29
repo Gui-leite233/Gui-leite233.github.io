@@ -34,14 +34,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Take full width */
-    max-width: none; /* Remove max-width constraint */
+    width: 100%;
+    max-width: none;
 }
 
-/* Project grid container */
 .project-grid {
     display: flex;
-    flex-direction: row; /* Horizontal on desktop */
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -134,14 +133,12 @@ header {
     color: #0f0;
 }
 
-/* For matrix animation */
 @keyframes matrixAnimation {
     0% { text-shadow: 0 0 5px #0f0; }
     50% { text-shadow: 0 0 20px #0f0; }
     100% { text-shadow: 0 0 5px #0f0; }
 }
 
-/* Mobile adjustments */
 @media screen and (max-width: 768px) {
     .project-grid {
         flex-direction: column;
@@ -218,8 +215,8 @@ header {
     border: 1px solid #0f0;
     border-radius: 6px;
     margin: 20px auto;
-    width: 80%; /* Increased width */
-    max-width: 2200px; /* Increased to fit ASCII art without scaling */
+    width: 80%;
+    max-width: 2200px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 }
@@ -261,8 +258,8 @@ header {
     color: #0f0;
     font-family: 'Courier New', monospace;
     margin: 20px auto;
-    font-size: 12px; /* Kept original size */
-    line-height: 1.15;  /* Adjusted for better alignment */
+    font-size: 12px;
+    line-height: 1.15;
     text-shadow: 0 0 5px #0f0;
     white-space: pre;
     text-align: center;
@@ -270,7 +267,7 @@ header {
     width: 1154px;
     overflow-x: visible;
     letter-spacing: 0;
-    font-weight: normal;  /* Added to ensure consistent rendering */
+    font-weight: normal;
 }
 
 .terminal-prompt {
@@ -327,16 +324,16 @@ header {
     }
     
     .ascii-art {
-        font-size: 3px; /* Make font even smaller on mobile */
-        transform: scale(0.8); /* Scale down slightly */
+        font-size: 3px;
+        transform: scale(0.8);
         width: 100%;
         max-width: 100%;
-        overflow-x: scroll; /* Explicitly set scroll for mobile */
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     
     .terminal-content {
-        padding: 10px; /* Less padding on mobile */
+        padding: 10px;
     }
 }
 
@@ -385,7 +382,6 @@ h2 {
     font-size: 32px !important;
 }
 
-/* Responsive adjustments */
 @media screen and (max-width: 1200px) {
     .terminal {
         width: 90%;
@@ -486,7 +482,7 @@ h2 {
     }
     
     .ascii-art {
-        display: none; /* Hide ASCII art on mobile */
+        display: none;
     }
     
     .mobile-title {
