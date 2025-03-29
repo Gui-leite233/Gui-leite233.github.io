@@ -24,6 +24,44 @@ function drawMatrix() {
     }
 }
 
+function simulateTyping(element, text, speed = 50) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
+}
+
+function applyTerminalEffects() {
+    const projects = document.querySelectorAll('.project');
+    projects.forEach((project, index) => {
+        project.classList.add('terminal-fade-in');
+        project.style.animationDelay = `${index * 0.2}s`;
+    });
+    // Removed btn cursor animation
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const prompts = document.querySelectorAll('.section-prompt');
+    prompts.forEach((prompt, index) => {
+        prompt.classList.add('command-prompt');
+        prompt.style.animationDelay = `${index * 0.2}s`;
+    });
+
+    const mobileTitle = document.querySelector('.mobile-title');
+    if (mobileTitle) {
+        simulateTyping(mobileTitle, mobileTitle.textContent);
+    }
+
+    applyTerminalEffects();
+});
 
 document.querySelector(".terminal-form").addEventListener("submit", async function (event) {
     event.preventDefault();
