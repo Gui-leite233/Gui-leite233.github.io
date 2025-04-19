@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>$Guilherme Leite - Desenvolvedor Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="matrix-bg"></div>
     <div class="terminal">
-        <div class="terminal-header">
-            <span class="terminal-button red"></span>
-            <span class="terminal-button yellow"></span>
-            <span class="terminal-button green"></span>
-            <span class="terminal-title">portfolio.exe</span>
-        </div>
-        <div class="terminal-content">
-            <header>
-                <div class="content">
-                    <pre class="ascii-art">
+      <div class="terminal-header" style="top: -1px;">
+        <span class="terminal-button red"></span>
+        <span class="terminal-button yellow"></span>
+        <span class="terminal-button green"></span>
+        <span class="terminal-title">portfolio.exe</span>
+        <button id="lang-toggle-btn" class="btn" style="margin-left: auto; font-size: 16px; padding: 4px 8px">
+          EN/PT
+        </button>
+      </div>
+      <div class="terminal-content">
+        <header>
+          <div class="content">
+            <pre class="ascii-art">
                                                                                                                                                               
            GGGGGGGGGGGGG                    iiii  llllll hhhhhh                                                                                                 
         GGG::::::::::::G                   i::::i l::::l h::::h                                                                                                 
@@ -39,88 +44,158 @@
       GG:::::::::::::::G u:::::::::::::::u i::::i l::::l h:::::h     h:::::h e::::::::eeeeeeee   r:::::r            m::::m   m::::m   m::::m e::::::::eeeeeeee  
         GGG::::::GGG:::G  uu::::::::uu:::u i::::i l::::l h:::::h     h:::::h  ee:::::::::::::e   r:::::r            m::::m   m::::m   m::::m  ee:::::::::::::e  
            GGGGGG   GGGG    uuuuuuuu  uuuu iiiiii llllll hhhhhhh     hhhhhhh    eeeeeeeeeeeeee   rrrrrrr            mmmmmm   mmmmmm   mmmmmm    eeeeeeeeeeeeee                                                                                                                                                          
-   </pre>
-                    <h1 class="mobile-title typing-animation">Guilherme Leite</h1>
-                    <p class="matrix-text typing-animation">echo "Desenvolvedor Full-Stack"</p>
-                </div>
-            </header>
-            <main>
-                <section class="about-me">
-                    <div class="section-prompt">cat SobreMim.txt</div>
-                    <div class="section-output">
-                        <h2>Sobre mim</h2>
-                        <p>
-                            Sou Guilherme Leite da Silva Chagas, desenvolvedor full-stack apaixonado por tecnologia. Tenho
-                            experiência com Laravel, JavaScript, Java, Ollama, bancos de dados (MySQL/MariaDB/MongoDB), Docker,
-                            GitHub e APIs.
-                        </p>
-                    </div>
-                </section>
-                
-                <section class="projects">
-                    <div class="section-prompt">ls -l projetos/</div>
-                    <div class="section-output">
-                        <h2 style="text-align: center; font-size: 27px;">Projetos</h2>
+   </pre
+            >
+            <h1 class="mobile-title typing-animation">Guilherme Leite</h1>
+            <p class="matrix-text typing-animation">
+              echo "Desenvolvedor Full-Stack"
+            </p>
+          </div>
+        </header>
+        <main>
+          <section class="about-me">
+            <div class="section-prompt">cat SobreMim.txt</div>
+            <div class="section-output">
+              <h2>Sobre mim</h2>
+              <p>
+                Sou Guilherme Leite da Silva Chagas, desenvolvedor full-stack
+                apaixonado por tecnologia. Tenho experiência com Laravel,
+                JavaScript, Java, Ollama, bancos de dados
+                (MySQL/MariaDB/MongoDB), Docker, GitHub e APIs.
+              </p>
+            </div>
+          </section>
 
-                        <div class="project-grid"> 
-                            <div class="project">
-                                <a href="https://github.com/Gui-leite233/ProjetoTrilhas"
-                                    style="text-decoration: none; color: #0f0; display: block; font-size: 24px; font-weight: bold;">
-                                    <u>Projeto Trilhas</u>
-                                </a>
-                                <p style="font-size: 20px;">Projeto Trilhas é uma iniciativa institucional focada no combate à evasão escolar por meio de uma
-                                    plataforma inovadora que conecta alunos, professores e futuros estudantes do IFPR. Foi meu maior
-                                    projeto, onde desenvolvi uma aplicação que permite aos alunos compartilhar conhecimentos e, com
-                                    isso, serem reconhecidos e recompensados. O Trilhas promove o engajamento e o aprendizado
-                                    colaborativo, incentivando uma comunidade educacional mais integrada e ativa.</p>
-                            </div>
-                            <div class="project">
-                                <a href="https://github.com/fernandofps20/ia-project"
-                                    style="text-decoration: none; color: #0f0; display: block; font-size: 24px; font-weight: bold;">
-                                    <u>IA-Project</u>
-                                </a>
-                                <p style="font-size: 20px;">Neste projeto, fui responsável pelo desenvolvimento do front-end e pela configuração do Docker. A
-                                    aplicação foi projetada para simplificar a vida dos desenvolvedores, permitindo que o usuário defina
-                                    as características desejadas para o seu banco de dados, enquanto uma inteligência artificial
-                                    automatiza o restante do processo.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <footer>
-                    <div class="section-prompt">cat EntreEmContato.txt</div>
-                    <div class="section-output">
-                        <h2 class="contato">Contato</h2>
-                        <div class="buttons">
-                            <a href="https://github.com/Gui-leite233" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.linkedin.com/in/guilhermeleitechagas/" class="btn"><i class="fab fa-linkedin"></i>
-                                LinkedIn</a>
-                            <a href="mailto:Guilhermeleite2334@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
-                        </div>
-                        <div class="section-prompt">echo "Me envie uma mensagem diretamente:"</div>
-                        <form action="https://formspree.io/f/mldjwngl" method="POST" class="terminal-form">
-                            <div class="form-group">
-                                <label>
-                                    $ echo "Seu email:"
-                                    <input type="email" name="email" required>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    $ echo "Sua mensagem:"
-                                    <textarea name="message" required></textarea>
-                                </label>
-                            </div>
-                            <button type="submit" class="btn">enviar_mensagem.sh</button>
-                        </form>
-                    </div>
-                </footer>
-            </main>
-        </div>
+          <section class="projects">
+            <div class="section-prompt">ls -l projetos/</div>
+            <div class="section-output">
+              <h2 style="text-align: center; font-size: 27px">Projetos</h2>
+
+              <div class="project-grid">
+                <div class="project">
+                  <a
+                    href="https://github.com/Gui-leite233/ProjetoTrilhas"
+                    style="
+                      text-decoration: none;
+                      color: #0f0;
+                      display: block;
+                      font-size: 24px;
+                      font-weight: bold;
+                    "
+                  >
+                    <u>Projeto Trilhas</u>
+                  </a>
+                  <p style="font-size: 20px">
+                    Projeto Trilhas é uma iniciativa institucional focada no
+                    combate à evasão escolar por meio de uma plataforma
+                    inovadora que conecta alunos, professores e futuros
+                    estudantes do IFPR. Foi meu maior projeto, onde desenvolvi
+                    uma aplicação que permite aos alunos compartilhar
+                    conhecimentos e, com isso, serem reconhecidos e
+                    recompensados. O Trilhas promove o engajamento e o
+                    aprendizado colaborativo, incentivando uma comunidade
+                    educacional mais integrada e ativa.
+                  </p>
+                </div>
+                <div class="project">
+                  <a
+                    href="https://github.com/fernandofps20/ia-project"
+                    style="
+                      text-decoration: none;
+                      color: #0f0;
+                      display: block;
+                      font-size: 24px;
+                      font-weight: bold;
+                    "
+                  >
+                    <u>IA-Project</u>
+                  </a>
+                  <p style="font-size: 20px">
+                    Neste projeto, fui responsável pelo desenvolvimento do
+                    front-end e pela configuração do Docker. A aplicação foi
+                    projetada para simplificar a vida dos desenvolvedores,
+                    permitindo que o usuário defina as características desejadas
+                    para o seu banco de dados, enquanto uma inteligência
+                    artificial automatiza o restante do processo.
+                  </p>
+                </div>
+                <div class="project">
+                  <a
+                    href="https://github.com/Gui-leite233/blog-api"
+                    style="
+                      text-decoration: none;
+                      color: #0f0;
+                      display: block;
+                      font-size: 24px;
+                      font-weight: bold;
+                    "
+                  >
+                    <u>Blog-Api</u>
+                  </a>
+                  <p style="font-size: 20px">
+                    O projeto é uma API de livraria baseada em NestJS com
+                    integração MongoDB. Ele possui autenticação de usuários
+                    (tokens JWT, controle de acesso baseado em funções),
+                    gerenciamento de livros com relacionamentos entre
+                    autores/categorias, e um sistema de avaliações para notas e
+                    comentários. A arquitetura segue os padrões de módulos do
+                    NestJS com separação adequada de controladores, serviços e
+                    DTOs. Inclui tratamento abrangente de erros, validação de
+                    dados e endpoints RESTful para todos os recursos (livros,
+                    autores, categorias, usuários, avaliações). O Mongoose
+                    gerencia a modelagem de objetos MongoDB, e guardas de
+                    segurança protegem operações exclusivas para
+                    administradores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer>
+            <div class="section-prompt">cat EntreEmContato.txt</div>
+            <div class="section-output">
+              <h2 class="contato">Contato</h2>
+              <div class="buttons">
+                <a href="https://github.com/Gui-leite233" class="btn"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/guilhermeleitechagas/"
+                  class="btn"
+                  ><i class="fab fa-linkedin"></i> LinkedIn</a
+                >
+                <a href="mailto:Guilhermeleite2334@gmail.com" class="btn"
+                  ><i class="fas fa-envelope"></i> Email</a
+                >
+              </div>
+              <div class="section-prompt">
+                echo "Me envie uma mensagem diretamente:"
+              </div>
+              <form
+                action="https://formspree.io/f/mldjwngl"
+                method="POST"
+                class="terminal-form"
+              >
+                <div class="form-group">
+                  <label>
+                    $ echo "Seu email:"
+                    <input type="email" name="email" required />
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    $ echo "Sua mensagem:"
+                    <textarea name="message" required></textarea>
+                  </label>
+                </div>
+                <button type="submit" class="btn">enviar_mensagem.sh</button>
+              </form>
+            </div>
+          </footer>
+        </main>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

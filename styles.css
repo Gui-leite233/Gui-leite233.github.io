@@ -13,6 +13,21 @@ html {
     height: 100%;
 }
 
+#lang-toggle-btn {
+    font-family: 'VT323', monospace;
+    border: 1px dashed #0f0;
+    background: transparent;
+    color: #0f0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+#lang-toggle-btn:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
 .matrix-bg {
     position: fixed;
     top: 0;
@@ -857,4 +872,28 @@ h2 {
         visibility: visible !important;
         text-shadow: 0 0 10px #0f0;
     }
+}
+
+/* Add this to your styles.css file */
+.language-btn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background: transparent;
+    color: #0f0;
+    border: 1px dashed #0f0;
+    padding: 4px 8px;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.language-btn:hover {
+    background: #0f0;
+    color: #000;
+}
+
+.terminal-header {
+    position: relative;
 }
