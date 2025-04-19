@@ -10,7 +10,7 @@ const translations = {
         projectTitle2: "IA-Project",
         projectDesc2: "Neste projeto, fui responsável pelo desenvolvimento do front-end e pela configuração do Docker. A aplicação foi projetada para simplificar a vida dos desenvolvedores, permitindo que o usuário defina as características desejadas para o seu banco de dados, enquanto uma inteligência artificial automatiza o restante do processo.",
         projectTitle3: "Blog-Api",
-        projectDesc3: "O projeto é uma API de livraria baseada em NestJS com integração MongoDB. Ele possui autenticação de usuários (tokens JWT, controle de acesso baseado em funções), gerenciamento de livros com relacionamentos entre autores/categorias, e um sistema de avaliações para notas e comentários. A arquitetura segue os padrões de módulos do NestJS com separação adequada de controladores, serviços e DTOs. Inclui tratamento abrangente de erros, validação de dados e endpoints RESTful para todos os recursos (livros, autores, categorias, usuários, avaliações). O Mongoose gerencia a modelagem de objetos MongoDB, e guardas de segurança protegem operações exclusivas para administradores.",
+        projectDesc3: "Uma API de livraria moderna que permite aos usuários explorar, avaliar e descobrir novos livros. Este projeto integra autenticação segura, gerenciamento completo de livros com suas relações a autores e categorias, além de um sistema de avaliações que permite aos leitores compartilhar suas opiniões. A arquitetura foi projetada para ser escalável e de fácil manutenção, com segurança integrada para proteger dados sensíveis.",
         contactTitle: "Contato",
         contactPrompt: "Me envie uma mensagem diretamente:",
         emailLabel: "Seu email:",
@@ -29,7 +29,7 @@ const translations = {
         projectTitle2: "IA-Project",
         projectDesc2: "In this project, I was responsible for front-end development and Docker configuration. The application was designed to simplify developers' lives, allowing users to define the desired characteristics for their database, while artificial intelligence automates the rest of the process.",
         projectTitle3: "Blog-Api",
-        projectDesc3: "The project is a NestJS-based bookstore API with MongoDB integration. It features user authentication (JWT tokens, role-based access), book management with author/category relationships, and a review system for ratings and comments. The architecture follows NestJS module patterns with proper separation of controllers, services, and DTOs. It includes comprehensive error handling, data validation, and RESTful endpoints for all resources (books, authors, categories, users, reviews). Mongoose handles MongoDB object modeling, and security guards protect admin-only operations.",
+        projectDesc3: "A modern bookstore API that allows users to explore, rate, and discover new books. This project integrates secure authentication, complete book management with author and category relationships, and a review system that enables readers to share their opinions. The architecture was designed to be scalable and easy to maintain, with integrated security to protect sensitive data.",
         contactTitle: "Contact",
         contactPrompt: "Send me a message directly:",
         emailLabel: "Your email:",
@@ -83,6 +83,8 @@ function updatePageContent(lang) {
     projects[0].querySelector('p').innerText = translations[lang].projectDesc1;
     projects[1].querySelector('a').innerText = translations[lang].projectTitle2;
     projects[1].querySelector('p').innerText = translations[lang].projectDesc2;
+    projects[2].querySelector('a').innerText = translations[lang].projectTitle3;
+    projects[2].querySelector('p').innerText = translations[lang].projectDesc3;
     
     document.querySelector('footer .section-prompt').innerText = lang === 'pt' ? 'cat EntreEmContato.txt' : 'cat ContactMe.txt';
     document.querySelector('footer h2').innerText = translations[lang].contactTitle;
